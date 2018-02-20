@@ -1,5 +1,5 @@
 //============================================================================
-// Name        : MyFirstProject.cpp
+// Name        : HashYourName.cpp
 // Author      : Noueman Khalikine
 // Version     : 1.01 FIXED K letter
 // Copyright   : Contact me at : noueman.khal@gmail.com
@@ -252,7 +252,7 @@ Z.setLine("#####",4);
 	// ez
 
 
-	cout << "\n\n\n" << "WriteYourName v1.0 :" << endl << "BY TERREXO - Contact : noueman.khal@gmail.com , Enjoy ! ;)" << endl << endl;
+	cout << "\n\n\n" << "HashYourName v1.0 :" << endl << "BY Noueman KHAL - Contact : noueman.khal@gmail.com , Enjoy ! ;)" << endl << endl;
 
 	system("PAUSE");
 	return 0;
