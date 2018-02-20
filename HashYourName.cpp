@@ -3,7 +3,7 @@
 // Author      : Noueman Khalikine
 // Version     : 1.01 FIXED K letter
 // Copyright   : Contact me at : noueman.khal@gmail.com
-// Description : Hello World in C++, Ansi-style
+// Description : main file 
 //============================================================================
 
 #include <iostream>
@@ -186,7 +186,7 @@ Z.setLine("#####",4);
 	cin >> name;
 	cout << "\n\n";
 
-	// switch case ==> affecter au tableau l'objet correspondant à chaque lettre
+	// switch case ==> affecter au tableau l'objet correspondant Ã  chaque lettre
 	for( i=0;i<name.length();i++){
 		name[i]=toupper(name[i]);
 		switch(name[i]){
@@ -247,7 +247,7 @@ Z.setLine("#####",4);
 	  myfile.close();
 
 
-	// switch case ==> affecter au tableau l'objet correspondant à chaque lettre
+	// switch case ==> affecter au tableau l'objet correspondant Ã  chaque lettre
 	// for, parcourir tableau - concatener jusqu'a positionFinale :) via un compteur / pointeur
 	// ez
 
