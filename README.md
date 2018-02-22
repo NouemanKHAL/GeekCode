@@ -1,7 +1,11 @@
-# HashYourName v1.0
-Writes your name in console and exports it to a .txt file with # character
-
-v1.0 : - Spaces not supported yet.
+# GeekCode v1.0
+Write anything in the console and it will print it and export it to a .txt file with # ( only one supported for now ) character
 
 ### Example ###
 ![alt text](https://i.imgur.com/Jr41h4N.png)
+
+### Goals in mind : 
+* Supporting essential alphanumeric characters.
+* Including keywords to draw some patterns / shapes.
+* Supporting different characters representation beside #
+
