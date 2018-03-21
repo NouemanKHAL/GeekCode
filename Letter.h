@@ -1,7 +1,7 @@
 /*
  * Letter.h
  *
- *  Created on: 13 août 2017
+ *  Created on: 13 aoÃ»t 2017
  *      Author: Terrexo
  */
 
@@ -13,20 +13,21 @@
 using namespace std;
 
 class Letter {
-public:
-	Letter();
+	
+		string lines[5];
+		int position=0;
 
-	string getLine(int n){
-		return lines[n];
-	}
+	public:
+		Letter();
 
-	void setLine( string line , int n){
-		if(n==position) position++;
-		lines[n]=line;
-	}
-private:
-	string lines[5];
-	int position=0;
+		string getLine(int n){
+			return lines[n];
+		}
+
+		void setLine(string line , int n){
+			if(n==position) position++;
+			lines[n]=line;
+		}
 
 };
 
