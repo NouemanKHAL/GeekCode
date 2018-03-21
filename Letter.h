@@ -15,20 +15,12 @@ using namespace std;
 class Letter {
 	
 		string lines[5];
-		int position=0;
+		int position;
 
 	public:
 		Letter();
-
-		string getLine(int n){
-			return lines[n];
-		}
-
-		void setLine(string line , int n){
-			if(n==position) position++;
-			lines[n]=line;
-		}
-
+		string getLine(int n);
+		void setLine(string line , int n);
 };
 
 #endif /* LETTER_H_ */
