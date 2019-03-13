@@ -13,10 +13,8 @@
 using namespace std;
 
 class Letter {
-	
 		string lines[5];
 		int position;
-
 	public:
 		Letter();
 		string getLine(int n);
