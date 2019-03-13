@@ -17,7 +17,6 @@ using namespace std;
 int main()
 {
     // declarer liste d'objet
-
     Letter tab[50];
     Letter A, B, C, D, E, F, G, H, I, J, K, L, M, N, O, P, Q, R, S, T, U, V, W, X, Y, Z;
     {
@@ -179,9 +178,10 @@ int main()
     }
     string name;
     unsigned int i, j, cpt = 0;
-    // lire le mot en input
+    
     cout << "Please Input Your Name : ";
     cin >> name;
+
     cout << "\n\n";
 
     // switch case ==> affecter au tableau l'objet correspondant à chaque lettre
@@ -309,17 +309,14 @@ int main()
     myfile.open("YourName.txt");
 
     for (j = 0; j < 5; j++) {
-
         for (i = 0; i < cpt; i++) {
-
             myfile << liste[i].getLine(j) << ' ';
         }
-
         myfile << endl;
     }
+    
     myfile.close();
 
-    // switch case ==> affecter au tableau l'objet correspondant à chaque lettre
     // for, parcourir tableau - concatener jusqu'a positionFinale :) via un compteur / pointeur
     // ez
 
