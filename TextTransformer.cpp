@@ -209,5 +209,17 @@ void TextTransformer::init() {
     letter[' '].setLine("     ", 2);
     letter[' '].setLine("     ", 3);
     letter[' '].setLine("     ", 4);
+
+    letter[','].setLine("     ", 0);
+    letter[','].setLine("     ", 1);
+    letter[','].setLine("     ", 2);
+    letter[','].setLine("###  ", 3);
+    letter[','].setLine("  #  ", 4);
+
+    letter['.'].setLine("     ", 0);
+    letter['.'].setLine("     ", 1);
+    letter['.'].setLine("     ", 2);
+    letter['.'].setLine(" ### ", 3);
+    letter['.'].setLine(" ### ", 4);
 }
 
