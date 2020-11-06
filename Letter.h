@@ -1,24 +1,13 @@
-/*
- * Letter.h
- *
- *  Created on: 13 août 2017
- *      Author: Terrexo
- */
-
-#ifndef LETTER_H_
-#define LETTER_H_
+#pragma once
 
 #include <string>
-
-using namespace std;
+#include <array>
 
 class Letter {
-		string lines[5];
-		int position;
+		std::array<std::string, 5> line;
 	public:
 		Letter();
-		string getLine(int n);
-		void setLine(string line , int n);
+		std::string getLine(size_t n);
+		void setLine(std::string, size_t);
+		std::string operator[](size_t);
 };
-
-#endif /* LETTER_H_ */

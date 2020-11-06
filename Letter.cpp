@@ -1,17 +1,22 @@
-#include <string>
 #include "Letter.h"
 
-using namespace std;
+Letter::Letter() {}
 
-Letter::position = 0;
-
-string Letter::getLine(int n){
-	return lines[n];
+std::string Letter::getLine(size_t index){
+	return line[index];
 }
 
-void Letter::setLine(string line , int n){
-	if(n==position) position++;
-	lines[n]=line;
+void Letter::setLine(std::string _line , size_t index){
+	if (index < line.size()) {
+		line[index] = _line;
+	}
+}
+
+std::string Letter::operator[](size_t index) {
+	if (index < line.size()) {
+		return line[index];
+	}
+	return std::string("");
 }
 
 
