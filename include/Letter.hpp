@@ -11,5 +11,5 @@ class Letter {
 		std::string getLine(size_t n);
 		void setLine(std::string, size_t);
 		std::string& operator[](size_t);
-		std::string& Letter::at(size_t);
+		std::string& at(size_t);
 };
