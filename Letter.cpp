@@ -12,11 +12,8 @@ void Letter::setLine(std::string _line , size_t index){
 	}
 }
 
-std::string Letter::operator[](size_t index) {
-	if (index < line.size()) {
-		return line[index];
-	}
-	return std::string("");
+std::string & Letter::operator[](size_t index) {
+	return line[index];
 }
 
 
