@@ -4,10 +4,10 @@
 #include <array>
 #include "Constants.hpp"
 
-class Letter {
-		std::array<std::string, constants::LETTER_SIZE> line;
+class Character {
+		std::array<std::string, constants::kCharacterSize> line;
 	public:
-		Letter();
+		Character();
 		std::string getLine(size_t n);
 		void setLine(std::string, size_t);
 		std::string& operator[](size_t);

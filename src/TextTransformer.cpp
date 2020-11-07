@@ -12,9 +12,9 @@ TextTransformer& TextTransformer::getInstance() {
 std::string TextTransformer::transformWord(const std::string & word) {
     std::ostringstream oss;
 
-    for (size_t level = 0; level < constants::LETTER_SIZE; ++level) {
+    for (size_t level = 0; level < constants::kCharacterSize; ++level) {
         for (const char& c : word) {
-            oss << letter[c][level] << ' ';
+            oss << character[c][level] << ' ';
         }
         oss << std::endl;
     }
@@ -48,178 +48,190 @@ std::string TextTransformer::get(std::string::iterator first1, std::string::iter
 }
 
 void TextTransformer::init() {
-    letter['a'].setLine("#####", 0);
-    letter['a'].setLine("#   #", 1);
-    letter['a'].setLine("#####", 2);
-    letter['a'].setLine("#   #", 3);
-    letter['a'].setLine("#   #", 4);
+    character['a'].setLine("#####", 0);
+    character['a'].setLine("#   #", 1);
+    character['a'].setLine("#####", 2);
+    character['a'].setLine("#   #", 3);
+    character['a'].setLine("#   #", 4);
 
-    letter['b'].setLine("#####", 0);
-    letter['b'].setLine("#   #", 1);
-    letter['b'].setLine("#### ", 2);
-    letter['b'].setLine("#   #", 3);
-    letter['b'].setLine("#####", 4);
+    character['b'].setLine("#####", 0);
+    character['b'].setLine("#   #", 1);
+    character['b'].setLine("#### ", 2);
+    character['b'].setLine("#   #", 3);
+    character['b'].setLine("#####", 4);
 
-    letter['c'].setLine("#####", 0);
-    letter['c'].setLine("#    ", 1);
-    letter['c'].setLine("#    ", 2);
-    letter['c'].setLine("#    ", 3);
-    letter['c'].setLine("#####", 4);
+    character['c'].setLine("#####", 0);
+    character['c'].setLine("#    ", 1);
+    character['c'].setLine("#    ", 2);
+    character['c'].setLine("#    ", 3);
+    character['c'].setLine("#####", 4);
 
-    letter['d'].setLine("#####", 0);
-    letter['d'].setLine("#   #", 1);
-    letter['d'].setLine("#   #", 2);
-    letter['d'].setLine("#   #", 3);
-    letter['d'].setLine("#####", 4);
+    character['d'].setLine("#####", 0);
+    character['d'].setLine("#   #", 1);
+    character['d'].setLine("#   #", 2);
+    character['d'].setLine("#   #", 3);
+    character['d'].setLine("#####", 4);
 
-    letter['e'].setLine("#####", 0);
-    letter['e'].setLine("#    ", 1);
-    letter['e'].setLine("#####", 2);
-    letter['e'].setLine("#    ", 3);
-    letter['e'].setLine("#####", 4);
+    character['e'].setLine("#####", 0);
+    character['e'].setLine("#    ", 1);
+    character['e'].setLine("#####", 2);
+    character['e'].setLine("#    ", 3);
+    character['e'].setLine("#####", 4);
 
-    letter['f'].setLine("#####", 0);
-    letter['f'].setLine("#    ", 1);
-    letter['f'].setLine("#####", 2);
-    letter['f'].setLine("#    ", 3);
-    letter['f'].setLine("#    ", 4);
+    character['f'].setLine("#####", 0);
+    character['f'].setLine("#    ", 1);
+    character['f'].setLine("#####", 2);
+    character['f'].setLine("#    ", 3);
+    character['f'].setLine("#    ", 4);
 
-    letter['g'].setLine("#####", 0);
-    letter['g'].setLine("#    ", 1);
-    letter['g'].setLine("# ###", 2);
-    letter['g'].setLine("#   #", 3);
-    letter['g'].setLine("#####", 4);
+    character['g'].setLine("#####", 0);
+    character['g'].setLine("#    ", 1);
+    character['g'].setLine("# ###", 2);
+    character['g'].setLine("#   #", 3);
+    character['g'].setLine("#####", 4);
 
-    letter['h'].setLine("#   #", 0);
-    letter['h'].setLine("#   #", 1);
-    letter['h'].setLine("#####", 2);
-    letter['h'].setLine("#   #", 3);
-    letter['h'].setLine("#   #", 4);
+    character['h'].setLine("#   #", 0);
+    character['h'].setLine("#   #", 1);
+    character['h'].setLine("#####", 2);
+    character['h'].setLine("#   #", 3);
+    character['h'].setLine("#   #", 4);
 
-    letter['i'].setLine("#####", 0);
-    letter['i'].setLine("  #  ", 1);
-    letter['i'].setLine("  #  ", 2);
-    letter['i'].setLine("  #  ", 3);
-    letter['i'].setLine("#####", 4);
+    character['i'].setLine("#####", 0);
+    character['i'].setLine("  #  ", 1);
+    character['i'].setLine("  #  ", 2);
+    character['i'].setLine("  #  ", 3);
+    character['i'].setLine("#####", 4);
 
-    letter['j'].setLine("#####", 0);
-    letter['j'].setLine("    #", 1);
-    letter['j'].setLine("    #", 2);
-    letter['j'].setLine("#   #", 3);
-    letter['j'].setLine("#####", 4);
+    character['j'].setLine("#####", 0);
+    character['j'].setLine("    #", 1);
+    character['j'].setLine("    #", 2);
+    character['j'].setLine("#   #", 3);
+    character['j'].setLine("#####", 4);
 
-    letter['k'].setLine("#   #", 0);
-    letter['k'].setLine("#  # ", 1);
-    letter['k'].setLine("###  ", 2);
-    letter['k'].setLine("#  # ", 3);
-    letter['k'].setLine("#   #", 4);
+    character['k'].setLine("#   #", 0);
+    character['k'].setLine("#  # ", 1);
+    character['k'].setLine("###  ", 2);
+    character['k'].setLine("#  # ", 3);
+    character['k'].setLine("#   #", 4);
 
-    letter['l'].setLine("#    ", 0);
-    letter['l'].setLine("#    ", 1);
-    letter['l'].setLine("#    ", 2);
-    letter['l'].setLine("#    ", 3);
-    letter['l'].setLine("#####", 4);
+    character['l'].setLine("#    ", 0);
+    character['l'].setLine("#    ", 1);
+    character['l'].setLine("#    ", 2);
+    character['l'].setLine("#    ", 3);
+    character['l'].setLine("#####", 4);
 
-    letter['m'].setLine("#   #", 0);
-    letter['m'].setLine("## ##", 1);
-    letter['m'].setLine("# # #", 2);
-    letter['m'].setLine("#   #", 3);
-    letter['m'].setLine("#   #", 4);
+    character['m'].setLine("#   #", 0);
+    character['m'].setLine("## ##", 1);
+    character['m'].setLine("# # #", 2);
+    character['m'].setLine("#   #", 3);
+    character['m'].setLine("#   #", 4);
 
-    letter['n'].setLine("#   #", 0);
-    letter['n'].setLine("##  #", 1);
-    letter['n'].setLine("# # #", 2);
-    letter['n'].setLine("#  ##", 3);
-    letter['n'].setLine("#   #", 4);
+    character['n'].setLine("#   #", 0);
+    character['n'].setLine("##  #", 1);
+    character['n'].setLine("# # #", 2);
+    character['n'].setLine("#  ##", 3);
+    character['n'].setLine("#   #", 4);
 
-    letter['o'].setLine("#####", 0);
-    letter['o'].setLine("#   #", 1);
-    letter['o'].setLine("#   #", 2);
-    letter['o'].setLine("#   #", 3);
-    letter['o'].setLine("#####", 4);
+    character['o'].setLine("#####", 0);
+    character['o'].setLine("#   #", 1);
+    character['o'].setLine("#   #", 2);
+    character['o'].setLine("#   #", 3);
+    character['o'].setLine("#####", 4);
 
-    letter['p'].setLine("#####", 0);
-    letter['p'].setLine("#   #", 1);
-    letter['p'].setLine("#####", 2);
-    letter['p'].setLine("#    ", 3);
-    letter['p'].setLine("#    ", 4);
+    character['p'].setLine("#####", 0);
+    character['p'].setLine("#   #", 1);
+    character['p'].setLine("#####", 2);
+    character['p'].setLine("#    ", 3);
+    character['p'].setLine("#    ", 4);
 
-    letter['q'].setLine("#####", 0);
-    letter['q'].setLine("#   #", 1);
-    letter['q'].setLine("#   #", 2);
-    letter['q'].setLine("# # #", 3);
-    letter['q'].setLine("#####", 4);
+    character['q'].setLine("#####", 0);
+    character['q'].setLine("#   #", 1);
+    character['q'].setLine("#   #", 2);
+    character['q'].setLine("# # #", 3);
+    character['q'].setLine("#####", 4);
 
-    letter['r'].setLine("#####", 0);
-    letter['r'].setLine("#   #", 1);
-    letter['r'].setLine("#### ", 2);
-    letter['r'].setLine("#  ##", 3);
-    letter['r'].setLine("#   #", 4);
+    character['r'].setLine("#####", 0);
+    character['r'].setLine("#   #", 1);
+    character['r'].setLine("#### ", 2);
+    character['r'].setLine("#  ##", 3);
+    character['r'].setLine("#   #", 4);
 
-    letter['s'].setLine("#####", 0);
-    letter['s'].setLine("#    ", 1);
-    letter['s'].setLine("#####", 2);
-    letter['s'].setLine("    #", 3);
-    letter['s'].setLine("#####", 4);
+    character['s'].setLine("#####", 0);
+    character['s'].setLine("#    ", 1);
+    character['s'].setLine("#####", 2);
+    character['s'].setLine("    #", 3);
+    character['s'].setLine("#####", 4);
 
-    letter['t'].setLine("#####", 0);
-    letter['t'].setLine("  #  ", 1);
-    letter['t'].setLine("  #  ", 2);
-    letter['t'].setLine("  #  ", 3);
-    letter['t'].setLine("  #  ", 4);
+    character['t'].setLine("#####", 0);
+    character['t'].setLine("  #  ", 1);
+    character['t'].setLine("  #  ", 2);
+    character['t'].setLine("  #  ", 3);
+    character['t'].setLine("  #  ", 4);
 
-    letter['u'].setLine("#   #", 0);
-    letter['u'].setLine("#   #", 1);
-    letter['u'].setLine("#   #", 2);
-    letter['u'].setLine("#   #", 3);
-    letter['u'].setLine("#####", 4);
+    character['u'].setLine("#   #", 0);
+    character['u'].setLine("#   #", 1);
+    character['u'].setLine("#   #", 2);
+    character['u'].setLine("#   #", 3);
+    character['u'].setLine("#####", 4);
 
-    letter['v'].setLine("#   #", 0);
-    letter['v'].setLine("#   #", 1);
-    letter['v'].setLine("#   #", 2);
-    letter['v'].setLine(" # # ", 3);
-    letter['v'].setLine("  #  ", 4);
+    character['v'].setLine("#   #", 0);
+    character['v'].setLine("#   #", 1);
+    character['v'].setLine("#   #", 2);
+    character['v'].setLine(" # # ", 3);
+    character['v'].setLine("  #  ", 4);
 
-    letter['w'].setLine("#   #", 0);
-    letter['w'].setLine("#   #", 1);
-    letter['w'].setLine("# # #", 2);
-    letter['w'].setLine("## ##", 3);
-    letter['w'].setLine("#   #", 4);
+    character['w'].setLine("#   #", 0);
+    character['w'].setLine("#   #", 1);
+    character['w'].setLine("# # #", 2);
+    character['w'].setLine("## ##", 3);
+    character['w'].setLine("#   #", 4);
 
-    letter['x'].setLine("#   #", 0);
-    letter['x'].setLine(" # # ", 1);
-    letter['x'].setLine("  #  ", 2);
-    letter['x'].setLine(" # # ", 3);
-    letter['x'].setLine("#   #", 4);
+    character['x'].setLine("#   #", 0);
+    character['x'].setLine(" # # ", 1);
+    character['x'].setLine("  #  ", 2);
+    character['x'].setLine(" # # ", 3);
+    character['x'].setLine("#   #", 4);
 
-    letter['y'].setLine("#   #", 0);
-    letter['y'].setLine(" # # ", 1);
-    letter['y'].setLine("  #  ", 2);
-    letter['y'].setLine("  #  ", 3);
-    letter['y'].setLine("  #  ", 4);
+    character['y'].setLine("#   #", 0);
+    character['y'].setLine(" # # ", 1);
+    character['y'].setLine("  #  ", 2);
+    character['y'].setLine("  #  ", 3);
+    character['y'].setLine("  #  ", 4);
 
-    letter['z'].setLine("#####", 0);
-    letter['z'].setLine("   # ", 1);
-    letter['z'].setLine("  #  ", 2);
-    letter['z'].setLine(" #   ", 3);
-    letter['z'].setLine("#####", 4);
+    character['z'].setLine("#####", 0);
+    character['z'].setLine("   # ", 1);
+    character['z'].setLine("  #  ", 2);
+    character['z'].setLine(" #   ", 3);
+    character['z'].setLine("#####", 4);
 
-    letter[' '].setLine("     ", 0);
-    letter[' '].setLine("     ", 1);
-    letter[' '].setLine("     ", 2);
-    letter[' '].setLine("     ", 3);
-    letter[' '].setLine("     ", 4);
+    character[' '].setLine("  ", 0);
+    character[' '].setLine("  ", 1);
+    character[' '].setLine("  ", 2);
+    character[' '].setLine("  ", 3);
+    character[' '].setLine("  ", 4);
 
-    letter[','].setLine("     ", 0);
-    letter[','].setLine("     ", 1);
-    letter[','].setLine("     ", 2);
-    letter[','].setLine("###  ", 3);
-    letter[','].setLine("  #  ", 4);
+    character[','].setLine("    ", 0);
+    character[','].setLine("    ", 1);
+    character[','].setLine("    ", 2);
+    character[','].setLine(" ## ", 3);
+    character[','].setLine("  # ", 4);
 
-    letter['.'].setLine("     ", 0);
-    letter['.'].setLine("     ", 1);
-    letter['.'].setLine("     ", 2);
-    letter['.'].setLine(" ### ", 3);
-    letter['.'].setLine(" ### ", 4);
+    character['.'].setLine("   ", 0);
+    character['.'].setLine("   ", 1);
+    character['.'].setLine("   ", 2);
+    character['.'].setLine("   ", 3);
+    character['.'].setLine(" # ", 4);
+
+    character['!'].setLine(" #  ", 0);
+    character['!'].setLine(" #  ", 1);
+    character['!'].setLine(" #  ", 2);
+    character['!'].setLine("    ", 3);
+    character['!'].setLine(" #  ", 4);
+
+    character['?'].setLine(" ##### ", 0);
+    character['?'].setLine(" #   # ", 1);
+    character['?'].setLine("   ##  ", 2);
+    character['?'].setLine("       ", 3);
+    character['?'].setLine("   #   ", 4);
 }
 

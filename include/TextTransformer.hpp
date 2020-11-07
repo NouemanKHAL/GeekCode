@@ -3,12 +3,12 @@
 #include <sstream>
 #include <unordered_map>
 #include <algorithm>
-#include "Letter.hpp"
+#include "Character.hpp"
 #include "Constants.hpp"
 
 class TextTransformer
 {
-	std::unordered_map<char, Letter> letter;
+	std::unordered_map<char, Character> character;
 	std::string transformWord(const std::string&);
 
 	TextTransformer();
