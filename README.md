@@ -1,7 +1,17 @@
 # GeekCode v2.0 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/NouemanKHAL/GeekCode/blob/master/LICENSE)
 
 
-A tool that helps you save time to write documents in a stylish geeky way.
+A CLI that helps you text into decorated geeky text
+
+
+````
+Usage: geekcode [options] file
+    Options:
+        --help :                Display this information.
+        --version :             Display the version of GeekCode.
+        --custom <char> :       Use a custom character to print the text.
+        --output <file> :       Specifies the output file.
+````
 
 # Example 
 * CMakeLists.txt :
@@ -26,11 +36,11 @@ foo@bar/GeekCode/build:~$ make
 ```
 * Launch your executable "geekcode".
 ```console 
-foo@bar/GeekCode/build:~$ geekcode <filename.txt>
+foo@bar/GeekCode/build:~$ geekcode <filename>
 ```
 
 # TO-DOs
 * Support essential alphanumeric characters -- DONE.
+* Support customizable character to draw characters -- DONE.
 * Support keywords to draw some shapes/emojis.
-* Support customizable character to draw characters (# by default).
 
