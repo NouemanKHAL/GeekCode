@@ -29,8 +29,10 @@ std::string TextTransformer::get(std::string::iterator first1, std::string::iter
     while (first1 != last1) {
         if (*first1 == '\n') {
             if (!buff.empty()) {
-                oss << transformWord(buff) << std::endl;
+                oss << transformWord(buff) << std::endl << std::endl;
                 buff.clear();
+            } else {
+                oss << std::endl << std::endl;
             }
         }
         else {
@@ -216,11 +218,23 @@ void TextTransformer::init() {
     character[','].setLine(" $$ ", 3);
     character[','].setLine("  $ ", 4);
 
+    character[';'].setLine("    ", 0);
+    character[';'].setLine(" $$ ", 1);
+    character[';'].setLine("    ", 2);
+    character[';'].setLine(" $$ ", 3);
+    character[';'].setLine("  $ ", 4);
+
     character['.'].setLine("   ", 0);
     character['.'].setLine("   ", 1);
     character['.'].setLine("   ", 2);
     character['.'].setLine("   ", 3);
     character['.'].setLine(" $ ", 4);
+
+    character[':'].setLine("   ", 0);
+    character[':'].setLine(" $ ", 1);
+    character[':'].setLine("   ", 2);
+    character[':'].setLine(" $ ", 3);
+    character[':'].setLine("   ", 4);
 
     character['!'].setLine(" $  ", 0);
     character['!'].setLine(" $  ", 1);
@@ -246,6 +260,18 @@ void TextTransformer::init() {
     character[')'].setLine("  $ ", 3);
     character[')'].setLine(" $  ", 4);
 
+    character['['].setLine(" $$ ", 0);
+    character['['].setLine(" $  ", 1);
+    character['['].setLine(" $  ", 2);
+    character['['].setLine(" $  ", 3);
+    character['['].setLine(" $$ ", 4);
+
+    character[']'].setLine(" $$ ", 0);
+    character[']'].setLine("  $ ", 1);
+    character[']'].setLine("  $ ", 2);
+    character[']'].setLine("  $ ", 3);
+    character[']'].setLine(" $$ ", 4);
+
     character['{'].setLine("  $$ ", 0);
     character['{'].setLine("  $  ", 1);
     character['{'].setLine(" $$  ", 2);
@@ -270,11 +296,53 @@ void TextTransformer::init() {
     character['-'].setLine("     ", 3);
     character['-'].setLine("     ", 4);
 
-    character['$'].setLine("$$$$$", 0);
-    character['$'].setLine("$ |  ", 1);
-    character['$'].setLine("$$$$$", 2);
-    character['$'].setLine("  | $", 3);
-    character['$'].setLine("$$$$$", 4);
+    character['+'].setLine("       ", 0);
+    character['+'].setLine("   $   ", 1);
+    character['+'].setLine(" $$$$$ ", 2);
+    character['+'].setLine("   $   ", 3);
+    character['+'].setLine("       ", 4);
+
+    character['$'].setLine("$$$$$ ", 0);
+    character['$'].setLine("$ |   ", 1);
+    character['$'].setLine("$$$$$ ", 2);
+    character['$'].setLine("  | $ ", 3);
+    character['$'].setLine("$$$$$ ", 4);
+
+    character['<'].setLine("   $  ", 0);
+    character['<'].setLine("  $   ", 1);
+    character['<'].setLine(" $    ", 2);
+    character['<'].setLine("  $   ", 3);
+    character['<'].setLine("   $  ", 4);
+
+    character['>'].setLine(" $    ", 0);
+    character['>'].setLine("  $   ", 1);
+    character['>'].setLine("   $  ", 2);
+    character['>'].setLine("  $   ", 3);
+    character['>'].setLine(" $    ", 4);
+
+    character['='].setLine("       ", 0);
+    character['='].setLine(" $$$$$ ", 1);
+    character['='].setLine("       ", 2);
+    character['='].setLine(" $$$$$ ", 3);
+    character['='].setLine("       ", 4);
+
+    character['#'].setLine("  $  $ ", 0);
+    character['#'].setLine("$$$$$$ ", 1);
+    character['#'].setLine(" $  $  ", 2);
+    character['#'].setLine("$$$$$$ ", 3);
+    character['#'].setLine("$  $   ", 4);
+
+    character['\''].setLine(" $ ", 0);
+    character['\''].setLine(" $ ", 1);
+    character['\''].setLine("   ", 2);
+    character['\''].setLine("   ", 3);
+    character['\''].setLine("   ", 4);
+
+    character['"'].setLine(" $ $ ", 0);
+    character['"'].setLine(" $ $ ", 1);
+    character['"'].setLine("     ", 2);
+    character['"'].setLine("     ", 3);
+    character['"'].setLine("     ", 4);
 
     character['0'].setLine("$$$$$", 0);
     character['0'].setLine("$   $", 1);
