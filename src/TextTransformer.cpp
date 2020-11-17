@@ -233,5 +233,47 @@ void TextTransformer::init() {
     character['?'].setLine("   ##  ", 2);
     character['?'].setLine("       ", 3);
     character['?'].setLine("   #   ", 4);
+
+    character['('].setLine("  # ", 0);
+    character['('].setLine(" #  ", 1);
+    character['('].setLine(" #  ", 2);
+    character['('].setLine(" #  ", 3);
+    character['('].setLine("  # ", 4);
+
+    character[')'].setLine(" #  ", 0);
+    character[')'].setLine("  # ", 1);
+    character[')'].setLine("  # ", 2);
+    character[')'].setLine("  # ", 3);
+    character[')'].setLine(" #  ", 4);
+
+    character['{'].setLine("  ## ", 0);
+    character['{'].setLine("  #  ", 1);
+    character['{'].setLine(" ##  ", 2);
+    character['{'].setLine("  #  ", 3);
+    character['{'].setLine("  ## ", 4);
+
+    character['}'].setLine(" ##  ", 0);
+    character['}'].setLine("  #  ", 1);
+    character['}'].setLine("  ## ", 2);
+    character['}'].setLine("  #  ", 3);
+    character['}'].setLine(" ##  ", 4);
+
+    character['_'].setLine("     ", 0);
+    character['_'].setLine("     ", 1);
+    character['_'].setLine("     ", 2);
+    character['_'].setLine("     ", 3);
+    character['_'].setLine(" ### ", 4);
+
+    character['-'].setLine("     ", 0);
+    character['-'].setLine("     ", 1);
+    character['-'].setLine(" ### ", 2);
+    character['-'].setLine("     ", 3);
+    character['-'].setLine("     ", 4);
+
+    character['$'].setLine("#####", 0);
+    character['$'].setLine("# |  ", 1);
+    character['$'].setLine("#####", 2);
+    character['$'].setLine("  | #", 3);
+    character['$'].setLine("#####", 4);
 }
 
