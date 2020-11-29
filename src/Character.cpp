@@ -1,13 +1,11 @@
 #include "Character.hpp"
 #include <stdexcept>
 
-Character::Character() {}
-
-std::string Character::getLine(size_t index){
+const std::string & Character::getLine(size_t index) {
 	return line[index];
 }
 
-void Character::setLine(std::string _line , size_t index){
+void Character::setLine(std::string _line , size_t index) {
 	if (index < line.size()) {
 		line[index] = _line;
 	}

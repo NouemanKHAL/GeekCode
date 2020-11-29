@@ -16,6 +16,6 @@ class TextTransformer
 public:
 	static TextTransformer& getInstance();
 	void init();
-	std::string get(std::string::iterator, std::string::iterator);
+	std::string get(std::string::iterator, std::string::iterator, char);
 };
 

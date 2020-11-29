@@ -42,5 +42,4 @@ foo@bar/GeekCode/build:~$ geekcode <filename>
 # TO-DOs
 * Support essential alphanumeric characters -- DONE.
 * Support customizable character to draw characters -- DONE.
-* Support keywords to draw some shapes/emojis.
 
