@@ -1,5 +1,7 @@
 #pragma once
 
-namespace constants {
-	const int kCharacterSize = 5;
+namespace GeekCode {
+	namespace constants {
+		const size_t kCharacterSize = 5;
+	}
 }

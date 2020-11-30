@@ -1,5 +1,7 @@
 #include "TextTransformer.hpp"
 
+using namespace GeekCode;
+
 TextTransformer::TextTransformer() {
     init();
 }
@@ -22,12 +24,12 @@ std::string TextTransformer::transformWord(const std::string & word) {
     return oss.str();
 }
 
-std::string TextTransformer::get(std::string::iterator first1, std::string::iterator last1, char customCharacter = '#') {
+std::string TextTransformer::get(std::string::iterator first, std::string::iterator last, char customCharacter = '#') {
     std::ostringstream oss;
     std::string buff;
 
-    while (first1 != last1) {
-        if (*first1 == '\n') {
+    while (first != last) {
+        if (*first == '\n') {
             if (!buff.empty()) {
                 oss << transformWord(buff) << std::endl << std::endl;
                 buff.clear();
@@ -36,9 +38,9 @@ std::string TextTransformer::get(std::string::iterator first1, std::string::iter
             }
         }
         else {
-            buff.push_back(tolower(*first1));
+            buff.push_back(tolower(*first));
         }
-        ++first1;
+        ++first;
     }
 
     if (!buff.empty()) {
@@ -52,6 +54,7 @@ std::string TextTransformer::get(std::string::iterator first1, std::string::iter
             c = customCharacter;
         }
     });
+
     return result;
 }
 

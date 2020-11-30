@@ -1,4 +1,4 @@
-# GeekCode v2.0 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/NouemanKHAL/GeekCode/blob/master/LICENSE)
+# GeekCode v2.5 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/NouemanKHAL/GeekCode/blob/master/LICENSE)
 
 
 A CLI that helps you text into decorated geeky text
@@ -7,10 +7,10 @@ A CLI that helps you text into decorated geeky text
 ````
 Usage: geekcode [options] file
     Options:
-        --help :                Display this information.
-        --version :             Display the version of GeekCode.
-        --custom <char> :       Use a custom character to print the text.
-        --output <file> :       Specifies the output file.
+        -h --help :                Display this information.
+        -v --version :             Display the version of GeekCode.
+        -c --custom <char> :       Use a custom character to print the text.
+        -o --output <file> :       Specifies the output file.
 ````
 
 # Example 
@@ -23,7 +23,7 @@ Usage: geekcode [options] file
 ![alt text](https://i.imgur.com/ErYvpwh.png)
 
 # Requirements
-* C++14 (Not tested with other versions)
+* C++14 or Higher 
 * CMake v3.5.1 or higher
 * Make (for Windows users : copy and rename MinGW/bin/mingw32-make.exe as make.exe)
 

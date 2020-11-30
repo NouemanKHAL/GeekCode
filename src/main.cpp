@@ -1,9 +1,11 @@
 #include <iostream>
-#include <fstream>
 #include <vector>
 #include <unordered_map>
-#include "Character.hpp"
 #include "TextTransformer.hpp"
+#include "FileHandler.hpp"
+#include "FileNotFound.hpp"
+
+using namespace GeekCode;
 
 void printHelp() {
     std::string help = R"""(
@@ -19,38 +21,35 @@ void printHelp() {
 }
 
 void printVersion() {
-    std::cout << "GeekCode v2.0 - 2020" << std::endl;
+    std::cout << "GeekCode v2.5 - 2020" << std::endl;
 }
 
-void processFile(std::string filename, std::string outputName = "", char customCharacter = '#') {
-    std::ifstream inputFile(filename);
-
-    if (inputFile) {
-        std::stringstream buf;
-        buf << inputFile.rdbuf();
-
-        std::string inputFileToStr = buf.str();
-        std::string result = TextTransformer::getInstance().get(inputFileToStr.begin(), inputFileToStr.end(), customCharacter);
-
+void processRequest(std::string filename, std::string outputName, char customCharacter = '#') {
+    try {
+        std::string fileToStr = FileHandler::readFileToString(filename);
+        std::string result = TextTransformer::getInstance().get(fileToStr.begin(), fileToStr.end(), customCharacter);        
 
         if (outputName.empty()) {
-            outputName = filename.substr(0, std::max(0, static_cast<int>(filename.size()) - 4)) + "-geek.txt";
-        } 
-
-        std::ofstream outputFile(outputName, std::ios::out);
-        outputFile << result;
-    } else {
-        std::cout << "File Not Found : " << filename << " ." << std::endl;
+            std::cout << result << std::endl;
+        } else {
+            FileHandler::writeStringToFile(outputName, result);
+        }
+    } catch (const FileNotFound & exception) {
+        std::cout << exception.what() << std::endl;
     }
 }
 
 
 bool isFlag(const std::string flag) {
     static const std::unordered_map<std::string, bool> exist = {
-        {"--help", true},  {"-h", true},
-        {"--version", true}, {"-v", true},
-        {"--output", true}, {"-o", true},
-        {"--custom", true}, {"-c", true}
+        {"-h", true},
+        {"--help", true},  
+        {"-v", true},
+        {"--version", true}, 
+        {"-o", true},
+        {"--output", true}, 
+        {"-c", true},
+        {"--custom", true}, 
     };
     return exist.find(flag) != exist.end();
 }
@@ -100,7 +99,7 @@ int main(int argc, char *argv[]) {
     }
 
     if (command == 'a') {
-        processFile(filename, outputFileName, customCharacter);
+        processRequest(filename, outputFileName, customCharacter);
     } else if (command == 'v') {
         printVersion();
     } else {
