@@ -8,8 +8,8 @@ namespace GeekCode {
 
     class FileNotFound : public std::runtime_error {
         public:
-            FileNotFound(const char*);
-            FileNotFound(const std::string &);
+            FileNotFound(const char* error_message);
+            FileNotFound(const std::string & error_message);
     };
 
 

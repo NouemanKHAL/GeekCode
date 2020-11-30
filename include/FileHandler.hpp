@@ -11,8 +11,8 @@ namespace GeekCode {
     class FileHandler {
         public:
             FileHandler() = delete;
-            static std::string readFileToString(std::string);
-            static void writeStringToFile(std::string, const std::string &);
+            static std::string readFileToString(std::string filename);
+            static void writeStringToFile(std::string filename, const std::string & data);
     };
     
 }

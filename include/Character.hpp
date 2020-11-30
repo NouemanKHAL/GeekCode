@@ -12,10 +12,10 @@ namespace GeekCode {
 		std::array<std::string, constants::kCharacterSize> line;
 	public:
 		Character() = default;
-		const std::string & getLine(size_t);
-		void setLine(std::string, size_t);
-		std::string & operator[](size_t);
-		std::string & at(size_t);
+		const std::string & getLine(size_t index);
+		void setLine(std::string, size_t index);
+		std::string & operator[](size_t index);
+		std::string & at(size_t index);
 	};
 
 }

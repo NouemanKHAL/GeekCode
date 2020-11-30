@@ -12,14 +12,14 @@ namespace GeekCode {
 
 	class TextTransformer {
 		std::unordered_map<char, Character> character;
-		std::string transformWord(const std::string &);
+		std::string transformWord(const std::string & word);
 		
 		TextTransformer();
 	public:
 		static TextTransformer & getInstance();
 		void init();
-		std::string get(std::string::const_iterator, std::string::const_iterator, char);
-		std::string get(const std::string &, char);
+		std::string get(std::string::const_iterator first, std::string::const_iterator last, char customCharacter);
+		std::string get(const std::string & text, char customCharacter);
 	};
 
 }
