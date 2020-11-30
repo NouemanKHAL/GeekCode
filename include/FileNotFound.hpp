@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FILENOTFOUND_H
+#define FILENOTFOUND_H
 
 #include <string>
 #include <stdexcept>
@@ -11,4 +12,8 @@ namespace GeekCode {
             FileNotFound(const std::string &);
     };
 
+
+
 }
+
+#endif // FILENOTFOUND_H

@@ -1,4 +1,5 @@
-#pragma once
+#ifndef CHARACTER_H
+#define CHARACTER_H
 
 #include <string>
 #include <array>
@@ -19,3 +20,4 @@ namespace GeekCode {
 
 }
 
+#endif // CHARACTER_H

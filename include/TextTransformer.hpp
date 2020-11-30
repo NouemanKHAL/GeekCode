@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TEXTTRANSFORMER_H
+#define TEXTTRANSFORMER_H
 
 #include <string>
 #include <sstream>
@@ -22,3 +23,5 @@ namespace GeekCode {
 	};
 
 }
+
+#endif // TEXTTRANSFORMER_H

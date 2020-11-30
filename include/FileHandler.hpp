@@ -1,4 +1,5 @@
-#pragma once
+#ifndef FILEHANDLER_H
+#define FILEHANDLER_H
 
 #include <string>
 #include <fstream>
@@ -15,3 +16,5 @@ namespace GeekCode {
     };
     
 }
+
+#endif // FILEHANDLER_H
