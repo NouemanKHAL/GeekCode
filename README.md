@@ -1,4 +1,4 @@
-# GeekCode v2.5 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/NouemanKHAL/GeekCode/blob/master/LICENSE)
+# GeekCode v2.7 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/NouemanKHAL/GeekCode/blob/master/LICENSE)
 
 
 A CLI that helps you text into decorated geeky text
