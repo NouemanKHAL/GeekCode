@@ -24,7 +24,7 @@ std::string TextTransformer::transformWord(const std::string & word) {
     return oss.str();
 }
 
-std::string TextTransformer::get(std::string::iterator first, std::string::iterator last, char customCharacter = '#') {
+std::string TextTransformer::get(std::string::const_iterator first, std::string::const_iterator last, char customCharacter = '#') {
     std::ostringstream oss;
     std::string buff;
 
@@ -56,6 +56,10 @@ std::string TextTransformer::get(std::string::iterator first, std::string::itera
     });
 
     return result;
+}
+
+std::string TextTransformer::get(const std::string & text, char customCharacter = '#') {
+    return get(text.cbegin(), text.cend(), customCharacter);
 }
 
 void TextTransformer::init() {

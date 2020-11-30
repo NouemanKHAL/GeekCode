@@ -17,7 +17,8 @@ namespace GeekCode {
 	public:
 		static TextTransformer & getInstance();
 		void init();
-		std::string get(std::string::iterator, std::string::iterator, char);
+		std::string get(std::string::const_iterator, std::string::const_iterator, char);
+		std::string get(const std::string &, char);
 	};
 
 }

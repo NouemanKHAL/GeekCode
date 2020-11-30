@@ -27,7 +27,7 @@ void printVersion() {
 void processRequest(std::string filename, std::string outputName, char customCharacter = '#') {
     try {
         std::string fileToStr = FileHandler::readFileToString(filename);
-        std::string result = TextTransformer::getInstance().get(fileToStr.begin(), fileToStr.end(), customCharacter);        
+        std::string result = TextTransformer::getInstance().get(fileToStr, customCharacter);        
 
         if (outputName.empty()) {
             std::cout << result << std::endl;
