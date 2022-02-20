@@ -1,7 +1,7 @@
 # GeekCode v2.7 [![license](https://img.shields.io/github/license/DAVFoundation/captain-n3m0.svg?style=flat-square)](https://github.com/NouemanKHAL/GeekCode/blob/master/LICENSE)
 
 
-A CLI that transforms text to ASCII Art.
+A CLI that transforms text into ASCII Art.
 
 
 ````
